@@ -1,6 +1,9 @@
 body{
     margin: 0
 }
+a {
+  text-decoration: none;
+}
 /* Code for Grid */
 .container {
     display: grid;
@@ -53,11 +56,15 @@ body{
     text-align:center;
   }
   .separation-content {
-background-color: aqua;
+    border-top: rgb(134, 127, 125) 1px solid;
+    border-bottom: rgb(134, 127, 125) 1px solid;
+    height: 2px;
+    width: 100%;
   }
 
-  .separation.sidebar {
-background-color: aqua;
+  .separation-sidebar {
+    border-top: rgb(134, 127, 125) 1px solid;
+    margin-top: 10px;
   }
 
  .div-h3{
@@ -83,7 +90,7 @@ background-color: aqua;
   .image {
     width: 16vw;
     height: 16vh;
-    border:  rgba(112, 107, 100, 0.658);
+    border:  rgba(112, 107, 100, 0.658) 1px solid;
     border-width: 1px;
   }
 
@@ -93,11 +100,20 @@ background-color: aqua;
     border:  rgba(112, 107, 100, 0.658);
   }
 
+  #image-sidebar {
+    float: left;
+    width: 10vw;
+    height: 9vh;
+    margin-top: 1px;
+    padding-right: 2px;
+    margin-right: 3px;
+  }
+
   .p-side{
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
-    margin-left: 2;
+    margin-left: 2px;
   }
   
 
@@ -107,11 +123,11 @@ background-color: aqua;
     font-size: 16px;
     text-align:center;
     background-color: rgba(207, 113, 70, 0.658);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right:25px;
-    padding-left: 25px;
-    border-radius: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right:10px;
+    padding-left: 10px;
+    border-radius: .2em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: inline-block;
   }
@@ -119,6 +135,21 @@ background-color: aqua;
   .button {
       display: block;
       text-align: center;
+  }
+
+  .button-date {
+    color: rgba(255, 254, 254, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    text-align:center;
+    background-color: rgba(37, 36, 34, 0.658);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right:10px;
+    padding-left: 10px;
+    border-radius: .5em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: inline-block;
   }
 
   .image-cta {
@@ -212,25 +243,7 @@ background-color: aqua;
     justify-content: center;
   }
 
-  #image-sidebar {
-    float: left;
-    width: 10vw;
-    height: 9vh;
-    margin-top: 1;
-  }
-
-  .button-date {
-    color: rgba(255, 254, 254, 0.658);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 16px;
-    text-align:center;
-    background-color: rgba(37, 36, 34, 0.658);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right:10px;
-    padding-left: 10px;
-  }
-
+  
   .footer {
     grid-area: footer;
     border: 1px solid black;
@@ -259,7 +272,8 @@ background-color: aqua;
     flex-direction:column;
     justify-content: space-around;
     width: 30vw;
-    align-items: flex-start
+    align-items: flex-start;
+    margin-right: 10px;
   }
 
   .contact-info {
@@ -267,19 +281,41 @@ background-color: aqua;
     flex-direction:column;
     justify-content: flex-start;
     width: 30vw;
-    align-items: flex-start
+    align-items: flex-start;
+    margin-left: 10px;
 }
 
   .name-email-container {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .name-email {
+    border: rgb(128, 117, 117) 1px solid;
+    background-color: rgb(214, 210, 203);
+    text-align: left;
+    border-width: .5px;
+    width: 45%;
+    height: 100%;
+    border-radius: .1em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    color: rgb(71, 56, 56);
+    padding-top: 3px;
+    padding-left: 3px;
+  }
+
+  #message {
+    width: 100%;
+    height: 40%;
   }
 
   .social {
     display: flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:space-around;
+    width: 100%;
   }
 
   .social-column1 {
@@ -294,12 +330,13 @@ background-color: aqua;
     justify-content: center
   }
 
-  .name-email {
-    border-color: black;
-    background-color: blanchedalmond;
-    text-align: left;
-    border-width: 1px;
+  .social-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
+
+ 
 
   
   
