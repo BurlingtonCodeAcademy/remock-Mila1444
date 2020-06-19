@@ -1,0 +1,310 @@
+body{
+    margin: 0
+}
+/* Code for Grid */
+.container {
+    display: grid;
+    background-color: rgba(236, 235, 234, 0.658);
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1fr 2fr 1.5fr 3fr 3fr 2fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        " .          header     header      header       ."
+        "  .         content-1  content-1   content-1    ."
+        "content-2   content-2  content-2   content-2    content-2"
+        ".           content-3  content-3   sidebar      ."
+        " .          content-4  content-4   sidebar      ."
+        "footer      footer     footer      footer       footer";
+  }
+
+  /* elements */
+  h1{
+    color: rgba(207, 113, 70, 0.658);
+    font-family:'Abril Fatface', cursive;
+    font-size:48px;
+    text-shadow: 2px 2px 2px #aaa;
+    text-align:center;
+    vertical-align:middle;
+  }
+
+  h2{
+    color: rgba(255, 255, 255, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 36px;
+    text-align:center;
+  }
+
+  h3{
+    color: rgba(112, 107, 100, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+  }
+
+  h4{
+    color: rgba(112, 107, 100, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+  }
+
+  #h4-section{
+    color: rgba(112, 107, 100, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    text-align:center;
+  }
+  .separation-content {
+background-color: aqua;
+  }
+
+  .separation.sidebar {
+background-color: aqua;
+  }
+
+ .div-h3{
+     text-align: center; 
+ }
+
+  .header-wrapper {
+    text-align: center; 
+    padding: .5px;
+    margin: 5px;
+  }
+  
+  /* Classes*/
+  .header {
+    grid-area: header;
+  }
+
+  .image-caption {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+  }
+  
+  .image {
+    width: 16vw;
+    height: 16vh;
+    border:  rgba(112, 107, 100, 0.658);
+    border-width: 1px;
+  }
+
+  #image-content {
+    width: 100%;
+    height: 30vh;
+    border:  rgba(112, 107, 100, 0.658);
+  }
+
+  .p-side{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 2;
+  }
+  
+
+  .cta {
+    color: rgba(255, 254, 254, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    text-align:center;
+    background-color: rgba(207, 113, 70, 0.658);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: inline-block;
+  }
+
+  .button {
+      display: block;
+      text-align: center;
+  }
+
+  .image-cta {
+    
+    height: 1.5vh;
+    border:  rgba(112, 107, 100, 0.658);
+  }
+
+  /* contains all images*/
+  .images-container-content1 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  /* Individual image wrapper*/
+  .image-wrapper-content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Classes-Containers*/
+  .content-1 {
+    grid-area: content-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  }
+
+  .content-2 {
+    grid-area: content-2;
+    background-color: rgb(114, 105, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%
+  }
+  
+  .content-3 {
+    grid-area: content-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .content-4 {
+    grid-area: content-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+  }
+
+  .flex-container-sidebar-dates {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+  }
+
+  .flex-container-sidebar-something {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+  }
+
+  .date-post {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+
+  .blog-post {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+
+  #image-sidebar {
+    float: left;
+    width: 10vw;
+    height: 9vh;
+    margin-top: 1;
+  }
+
+  .button-date {
+    color: rgba(255, 254, 254, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    text-align:center;
+    background-color: rgba(37, 36, 34, 0.658);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right:10px;
+    padding-left: 10px;
+  }
+
+  .footer {
+    grid-area: footer;
+    border: 1px solid black;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+  }
+
+  .tittle-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+
+  .flex-container-footer {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    width: 30vw;
+    align-items: flex-start
+  }
+
+  .contact-info {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    width: 30vw;
+    align-items: flex-start
+}
+
+  .name-email-container {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .social {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+  }
+
+  .social-column1 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center
+  }
+
+  .social-column2 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center
+  }
+
+  .name-email {
+    border-color: black;
+    background-color: blanchedalmond;
+    text-align: left;
+    border-width: 1px;
+  }
+
+  
+  
+ 
+
+ 
+  
+  
