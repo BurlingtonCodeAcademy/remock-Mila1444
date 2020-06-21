@@ -22,6 +22,21 @@ a {
         "footer      footer     footer      footer       footer";
   }
 
+  .container-continue-reading {
+    display: grid;
+    background-color: rgba(236, 235, 234, 0.658);
+    grid-template-columns: 1.0fr 2fr 2fr 2fr 1.0fr;
+    grid-template-rows: 1fr 2fr 1.5fr 3fr 3fr 2fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        " .          header     header      header       ."
+        "  .         content-3  content-3   sidebar    ."
+        " .          content-3  content-3   sidebar    ."
+        ".           content-3  content-3   sidebar      ."
+        " .          content-3  content-3   sidebar      ."
+        "footer      footer     footer      footer       footer";
+  }
+
   /* elements */
   h1{
     color: rgba(207, 113, 70, 0.658);
@@ -71,7 +86,6 @@ a {
 
   .separation-sidebar {
     border-top: rgb(134, 127, 125) 1px solid;
-    margin-top: 10px;
   }
 
  .div-h3{
@@ -98,15 +112,17 @@ a {
     width: 16vw;
     height: 16vh;
     border:  rgba(112, 107, 100, 0.658) 1px solid;
-    border-width: 1px;
+    border-width: 3px;
   }
 
-  #image-content {
+  .image-post{
+    border:  rgba(112, 107, 100, 0.658) 1px solid;
+    border-width: 3px;
     width: 100%;
     height: 30vh;
-    border:  rgba(112, 107, 100, 0.658);
-    border-width: 1px;
   }
+
+
 
   #image-sidebar {
     float: left;
@@ -115,6 +131,8 @@ a {
     margin-top: 1px;
     margin-right: 3px;
   }
+
+ 
 
   .p-side{
     margin-top: 0;
@@ -127,7 +145,7 @@ a {
     
   }
   
-
+/*buttons*/
   .cta {
     color: rgba(255, 254, 254, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
@@ -141,6 +159,7 @@ a {
     border-radius: .2em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: inline-block;
+    margin-top: 10px;
   }
 
   .button {
@@ -161,10 +180,10 @@ a {
     border-radius: .5em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: inline-block;
+    margin-top: 5px;
   }
 
   .image-cta {
-    
     height: 1.5vh;
     border:  rgba(112, 107, 100, 0.658);
   }
@@ -190,7 +209,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
   }
 
   .content-2 {
@@ -202,7 +220,7 @@ a {
     width: 100%;
     height: 100%;
     border:  rgba(112, 107, 100, 0.658);
-    border-width: 1px;
+    border-width: 5px;
   }
   
   .content-3 {
@@ -220,6 +238,8 @@ a {
     justify-content: space-around;
     align-items: flex-start;
   }
+
+  /* sidebar classes and elements */
   
   .sidebar {
     grid-area: sidebar;
@@ -236,6 +256,12 @@ a {
     height: 50%;
   }
 
+  .date-post {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+
   .flex-container-sidebar-something {
     display: flex;
     flex-direction:column;
@@ -244,25 +270,25 @@ a {
     height: 50%;
   }
 
-  .date-post {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-  }
-
   .blog-post {
     display:flex;
     flex-direction:column;
     justify-content: center;
   }
 
-  
+  /* footer classes and elements */
   .footer {
     grid-area: footer;
-    border: 1px solid black;
     display: flex;
     flex-direction:column;
     justify-content: center;
+  }
+
+  .flex-container-footer {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    height: 40%;
   }
 
   .tittle-footer {
@@ -271,38 +297,26 @@ a {
     justify-content: center;
     align-content: center;
     text-align: center;
+    margin-bottom: 30px;
   }
   
-
-  .flex-container-footer {
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-  }
-
+  /* form elements */
   .form {
     display: flex;
     flex-direction:column;
     justify-content: space-around;
-    width: 30vw;
+    width: 35vw;
     align-items: flex-start;
-    margin-right: 10px;
+    margin-left: 50px;
   }
 
-  .contact-info {
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    width: 30vw;
-    align-items: flex-start;
-    margin-left: 10px;
-}
 
   .name-email-container {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    width: 100%;
+    width: 101.7%;
+    margin-bottom: 5px;
   }
 
   .name-email {
@@ -316,14 +330,34 @@ a {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     color: rgb(71, 56, 56);
     padding-top: 3px;
+  }
+  
+  .message {
+    border: rgb(128, 117, 117) 1px solid;
+    background-color: rgb(214, 210, 203);
+    text-align: left;
+    border-width: .5px;
+    border-radius: .1em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    color: rgb(71, 56, 56);
+    padding-top: 3px;
     padding-left: 3px;
-  }
-
-  #message {
     width: 100%;
-    height: 40%;
+    height: 50%;
+    margin-top: 5px;
   }
 
+  /* contact and social elements */
+
+  .contact-info {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    width: 35vw;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+  
   .social {
     display: flex;
     flex-direction:row;
@@ -331,35 +365,76 @@ a {
     width: 100%;
   }
 
-  .social-column1 {
-    display: flex;
-    flex-direction:column;
-    justify-content: center
-  }
-
-  .social-column2 {
-    display: flex;
-    flex-direction:column;
-    justify-content: center
-  }
-
-  .social-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .class-address{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
   .parag{
     color: rgba(20, 18, 15, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12px;
+    margin-top: 0;
   }
+
+  .social-text{
+    color: rgba(20, 18, 15, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 8px;
+    margin-top: 0;
+  }
+
+  .social-column1 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 40%;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .social-column2 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 40%;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px;
+    height: 110%;
+    padding: 9px;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align:right;
+    height: 98%;
+    align-items: flex-start;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align:right;
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .address{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+
+
+
+  
 
  
 
