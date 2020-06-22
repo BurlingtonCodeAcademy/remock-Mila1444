@@ -1,7 +1,30 @@
 body{
     margin: 0
 }
-A:hover { COLOR: rgb(77, 33, 8); TEXT-DECORATION: none; font-weight: none }
+
+.cta:hover{
+  background: rgba(192, 157, 116, 0.781);
+}
+
+.name-email:hover{
+  background: white
+}
+
+.message:hover{
+  background: white
+}
+
+.button-date:hover{
+  background: rgba(138, 135, 135, 0.808)
+}
+
+#t-1:hover{
+  color: red;
+}
+
+#dark{
+  color: rgb(20, 20, 20);
+}
 
 a {
   text-decoration: none;
@@ -37,6 +60,35 @@ a {
         "footer      footer     footer      footer       footer";
   }
 
+  .container-learn-more {
+    display: grid;
+    background-color: rgba(236, 235, 234, 0.658);
+    grid-template-columns: 1.0fr 2fr 2fr 2fr 1.0fr;
+    grid-template-rows: 1fr 2fr 1.5fr 3fr 2fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        " .          header     header      header       ."
+        "  .         sidebar  content-3   content-3    ."
+        " .          sidebar  content-3   content-3    ."
+        ".           sidebar  content-3   content-3      ."
+        "footer      footer     footer      footer       footer";
+  }
+
+  .container-blog-post {
+    display: grid;
+    background-color: rgba(236, 235, 234, 0.658);
+    grid-template-columns: 1.0fr 1.5fr 1.5fr 1.5fr 1.0fr;
+    grid-template-rows: 1fr 2fr 1.5fr 3fr 3fr 2fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        " .          header     header      header       ."
+        "  .         content-3  content-3   content-3    ."
+        " .          content-3  content-3   content-3    ."
+        ".           content-3  content-3   content-3      ."
+        " .          content-3  content-3   content-3      ."
+        "footer      footer     footer      footer       footer";
+  }
+
   /* elements */
   h1{
     color: rgba(207, 113, 70, 0.658);
@@ -55,24 +107,24 @@ a {
   }
 
   h3{
-    color: rgba(112, 107, 100, 0.658);
+    color: rgba(56, 54, 50, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
   }
 
   h4{
-    color: rgba(112, 107, 100, 0.658);
+    color: rgba(56, 54, 50, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
   }
 
   .side-tittle{
-    color: rgba(112, 107, 100, 0.658);
+    color: rgba(56, 54, 50, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
   }
   #h4-section{
-    color: rgba(112, 107, 100, 0.658);
+    color: rgba(56, 54, 50, 0.658);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
     text-align:center;
@@ -98,11 +150,12 @@ a {
     margin: 5px;
   }
   
-  /* Classes*/
+  
   .header {
     grid-area: header;
   }
 
+  /* Images*/
   .image-caption {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12px;
@@ -115,24 +168,34 @@ a {
     border-width: 3px;
   }
 
-  .image-post{
+  .image-blog{
     border:  rgba(112, 107, 100, 0.658) 1px solid;
     border-width: 3px;
     width: 100%;
     height: 30vh;
   }
 
+  .image-blog-post{
+    border:  rgba(112, 107, 100, 0.658) 1px solid;
+    border-width: 3px;
+    width: 220%;
+    height: 70vh;
+  }
 
+  .image-cr{
+    border:  rgba(112, 107, 100, 0.658) 1px solid;
+    border-width: 3px;
+    width: 150%;
+    height: 50vh;
+  }
 
   #image-sidebar {
     float: left;
     width: 10vw;
     height: 9vh;
-    margin-top: 1px;
+    margin-top: 10px;
     margin-right: 3px;
   }
-
- 
 
   .p-side{
     margin-top: 0;
@@ -282,6 +345,7 @@ a {
     display: flex;
     flex-direction:column;
     justify-content: center;
+    background-color: rgba(228, 220, 213, 0.658);
   }
 
   .flex-container-footer {
@@ -345,6 +409,9 @@ a {
     width: 100%;
     height: 50%;
     margin-top: 5px;
+    color: rgba(112, 107, 100, 0.658);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
   }
 
   /* contact and social elements */
@@ -430,6 +497,8 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  
 
 
 
